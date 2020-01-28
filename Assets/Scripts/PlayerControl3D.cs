@@ -20,15 +20,15 @@ public class PlayerControl3D : MonoBehaviour
 		var vel = rb2d.velocity;
 		if (Input.GetKey(moveUp))
 		{
-			vel.y = speed;
+			vel.z = speed;
 		}
 		else if (Input.GetKey(moveDown))
 		{
-			vel.y = -speed;
+			vel.z = -speed;
 		}
 		else if (!Input.anyKey)
 		{
-			vel.y = 0;
+			vel.z = 0;
 		}
 		rb2d.velocity = vel;
 
