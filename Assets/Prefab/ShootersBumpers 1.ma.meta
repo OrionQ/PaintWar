@@ -1,25 +1,29 @@
 fileFormatVersion: 2
-guid: d23c2143e8335af4d961acba576b424b
+guid: 3557d37277aee4c8097abaa467446e78
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: pCube5
-    100002: pCylinder3
-    100004: pCylinder4
-    100006: //RootNode
-    100008: transform1
-    100010: transform2
-    400000: pCube5
-    400002: pCylinder3
-    400004: pCylinder4
-    400006: //RootNode
-    400008: transform1
-    400010: transform2
+    100000: pCylinder3
+    100002: pCylinder4
+    100004: pSphere5
+    100006: pSphere6
+    100008: //RootNode
+    100010: transform1
+    100012: transform2
+    400000: pCylinder3
+    400002: pCylinder4
+    400004: pSphere5
+    400006: pSphere6
+    400008: //RootNode
+    400010: transform1
+    400012: transform2
     2100000: lambert1
-    2300000: pCube5
-    3300000: pCube5
-    4300000: pCube5
-    2186277476908879412: ImportLogs
+    2300000: pSphere5
+    2300002: pSphere6
+    3300000: pSphere5
+    3300002: pSphere6
+    4300000: pSphere5
+    4300002: pSphere6
   externalObjects: {}
   materials:
     importMaterials: 1
