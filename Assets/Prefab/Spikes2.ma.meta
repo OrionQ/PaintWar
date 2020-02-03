@@ -541,10 +541,117 @@ ModelImporter:
     4300208: pCone109
     4300210: pCone110
     4300212: pCone111
+    6400000: pCone1
+    6400002: pCone10
+    6400004: pCone100
+    6400006: pCone101
+    6400008: pCone102
+    6400010: pCone103
+    6400012: pCone104
+    6400014: pCone105
+    6400016: pCone106
+    6400018: pCone107
+    6400020: pCone108
+    6400022: pCone109
+    6400024: pCone11
+    6400026: pCone110
+    6400028: pCone111
+    6400030: pCone12
+    6400032: pCone13
+    6400034: pCone14
+    6400036: pCone15
+    6400038: pCone16
+    6400040: pCone17
+    6400042: pCone18
+    6400044: pCone19
+    6400046: pCone2
+    6400048: pCone21
+    6400050: pCone22
+    6400052: pCone23
+    6400054: pCone24
+    6400056: pCone25
+    6400058: pCone26
+    6400060: pCone27
+    6400062: pCone28
+    6400064: pCone29
+    6400066: pCone3
+    6400068: pCone30
+    6400070: pCone31
+    6400072: pCone32
+    6400074: pCone33
+    6400076: pCone34
+    6400078: pCone35
+    6400080: pCone36
+    6400082: pCone37
+    6400084: pCone38
+    6400086: pCone39
+    6400088: pCone4
+    6400090: pCone40
+    6400092: pCone41
+    6400094: pCone42
+    6400096: pCone43
+    6400098: pCone44
+    6400100: pCone45
+    6400102: pCone48
+    6400104: pCone49
+    6400106: pCone5
+    6400108: pCone50
+    6400110: pCone51
+    6400112: pCone52
+    6400114: pCone53
+    6400116: pCone54
+    6400118: pCone55
+    6400120: pCone56
+    6400122: pCone57
+    6400124: pCone58
+    6400126: pCone59
+    6400128: pCone6
+    6400130: pCone60
+    6400132: pCone61
+    6400134: pCone62
+    6400136: pCone63
+    6400138: pCone64
+    6400140: pCone65
+    6400142: pCone66
+    6400144: pCone67
+    6400146: pCone68
+    6400148: pCone69
+    6400150: pCone70
+    6400152: pCone71
+    6400154: pCone72
+    6400156: pCone73
+    6400158: pCone74
+    6400160: pCone75
+    6400162: pCone76
+    6400164: pCone77
+    6400166: pCone78
+    6400168: pCone79
+    6400170: pCone8
+    6400172: pCone80
+    6400174: pCone81
+    6400176: pCone82
+    6400178: pCone83
+    6400180: pCone84
+    6400182: pCone85
+    6400184: pCone86
+    6400186: pCone87
+    6400188: pCone88
+    6400190: pCone89
+    6400192: pCone9
+    6400194: pCone90
+    6400196: pCone91
+    6400198: pCone92
+    6400200: pCone93
+    6400202: pCone94
+    6400204: pCone95
+    6400206: pCone96
+    6400208: pCone97
+    6400210: pCone98
+    6400212: pCone99
     2186277476908879412: ImportLogs
   externalObjects: {}
   materials:
-    importMaterials: 1
+    importMaterials: 0
     materialName: 0
     materialSearch: 1
     materialLocation: 1
@@ -575,7 +682,7 @@ ModelImporter:
     lODScreenPercentages: []
     globalScale: 1
     meshCompression: 0
-    addColliders: 0
+    addColliders: 1
     useSRGBMaterialColor: 1
     importVisibility: 1
     importBlendShapes: 1
