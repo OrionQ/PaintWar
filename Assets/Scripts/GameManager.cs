@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour {
 
@@ -9,39 +10,44 @@ public class GameManager : MonoBehaviour {
 
 	public GUISkin layout;
 
-	GameObject theBall;
+	GameObject particleSystem1;
+	GameObject particleSystem2;
 
 	// Use this for initialization
 	void Start () {
-		theBall = GameObject.FindGameObjectWithTag ("Ball");
+		particleSystem1 = GameObject.FindGameObjectWithTag ("Shooter1");
+		particleSystem2 = GameObject.FindGameObjectWithTag ("Shooter2");
 	}
 
-	public static void Score(string wallID) {
-		if (wallID == "RightWall") {
-			PlayerScore1++;
-		} else {
+	public static void Score(string wallID, string shooter) {
+		if (wallID == "Spikes1" && shooter == "pCylinder5") {
 			PlayerScore2++;
+		} else if (wallID == "Spikes2" && shooter == "pCylinder6"){
+			PlayerScore1++;
 		}
 	}
 
 	void OnGUI() {
 		GUI.skin = layout;
-		GUI.Label (new Rect (Screen.width / 2 - 150 - 12, 20, 100, 100), "" + PlayerScore1);
-		GUI.Label (new Rect (Screen.width / 2 + 150 + 12, 20, 100, 100), "" + PlayerScore2);
+		GUI.Label (new Rect (Screen.width / 2 - 200 - 20, 20, 150, 100), "" + PlayerScore1 + "%");
+		GUI.Label (new Rect (Screen.width / 2 + 200 + 20, 20, 150, 100), "" + PlayerScore2 + "%");
 
 		if (GUI.Button (new Rect (Screen.width / 2 - 60, 35, 120, 53), "RESTART")) {
 			PlayerScore1 = 0;
 			PlayerScore2 = 0;
-			theBall.SendMessage ("RestartGame", 0.5f, SendMessageOptions.RequireReceiver);
-		}
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            Time.timeScale = 1f;
+        }
 
-		if (PlayerScore1 == 10) {
-			GUI.Label (new Rect (Screen.width / 2 - 150, 200, 2000, 1000), "PLAYER ONE WINS");
-			theBall.SendMessage ("ResetBall", null, SendMessageOptions.RequireReceiver);
-		} else if (PlayerScore2 == 10) {
-			GUI.Label (new Rect (Screen.width / 2 - 150, 200, 2000, 1000), "PLAYER TWO WINS");
-			theBall.SendMessage ("ResetBall", null, SendMessageOptions.RequireReceiver);
-		}
+        if (PlayerScore1 == 100) {
+			GUI.Label (new Rect (Screen.width / 2 - 200, 200, 2000, 1000), "PLAYER ONE WINS!");
+            Time.timeScale = 0f;
+
+        }
+        else if (PlayerScore2 == 100) {
+			GUI.Label (new Rect (Screen.width / 2 - 200, 200, 2000, 1000), "PLAYER TWO WINS!");
+            Time.timeScale = 0f;
+        }
 	}
 
 }

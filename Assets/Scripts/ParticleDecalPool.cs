@@ -21,7 +21,7 @@ public class ParticleDecalPool : MonoBehaviour
         particleData = new ParticleDecalData[maxDecals];
         for (int i = 0; i < maxDecals; i++)
         {
-            particleData[i] = new ParticleDecalData();
+            
         }
     }
 

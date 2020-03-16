@@ -3,13 +3,20 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class SideWalls : MonoBehaviour {
+	public ParticleSystem part;
+	public List<ParticleCollisionEvent> collisionEvents;
+    public AudioClip pop;
+    void Start()
+	{
+			part = GetComponent<ParticleSystem>();
+			collisionEvents = new List<ParticleCollisionEvent>();
+        GetComponent<AudioSource>().playOnAwake = false;
+    }
 
-	void OnTriggerEnter2D(Collider2D hitInfo) {
-		if (hitInfo.name == "Ball")
-		{
-			string wallName = transform.name;
-			GameManager.Score (wallName);
-			hitInfo.gameObject.SendMessage ("RestartGame", 1, SendMessageOptions.RequireReceiver);
-		}
-	}
+
+	void OnParticleCollision(GameObject other) {
+			 GameManager.Score(this.gameObject.name, other.name);
+        GetComponent<AudioSource>().Play();
+
+    }
 }
